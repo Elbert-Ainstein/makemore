@@ -91,4 +91,10 @@ We know that we are building a *character level language model*, which is that w
 5. ...
 6. after the word "isabella" the word is likely to end.
 
+In a word there is information provided into the statistical structure that determines which characters are at what position, and when the word ends. We have 32 thousand of these words. Loads of structures to model here :D
+
+The first model that we would like to make is the Bigram Language Model. In the model, we are always just working with two characters at a time. We are given one character, and we are predicting the next character in the sequence following it. 
+
+### Exploring Bigrams in a dataset
+
 
