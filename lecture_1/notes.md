@@ -97,4 +97,45 @@ The first model that we would like to make is the Bigram Language Model. In the 
 
 ### Exploring Bigrams in a dataset
 
+Let's begin looking at the bigrams in the dataset. Bigrams are just two characters in a row.
+
+```python
+# Sliding thru the words 
+for w in words:
+    for ch1, ch2 in zip(w, w[1:]):
+        print(ch1, ch2)
+```
+
+the output should be something like this:
+
+```sh
+e m
+m m
+m a
+o l
+l i
+i v
+v i
+i a
+a v
+...
+```
+
+Let me explain how this works. Take the word emma a look. It reads
+
+```python
+e m
+m m
+m a
+```
+
+The reason for this to work is that *w* = 'emma', and *w[1:]* = 'mma'. The zip function essentially takes two iterators and pairs them up, and iterates the tuples. If one list is shorter than the other, it would just be deleted. The tuples looks something like this:
+
+```python
+ w|w[1:]
+(e, m)
+(m, m)
+(m, a)
+# the 'a' in the w list gets removed
+```
 
