@@ -147,7 +147,7 @@ The reason for this to work is that *w* = 'emma', and *w[1:]* = 'mma'. The zip f
 
 Just keep in mind that there isn't just **these** consecutive characters in our dataset; There are a lot more. However, just based on this first set of consecutive letters, we can tell that the letter *e* is likely to be the beginning of a name, and the letter *a* is likely to be the end of a name.
 
-What we are going to do right now is to make a special array with special start and end tokens to indicate the beginning and end of a name. We are also going to wrap the <span class="blue"></span>
+What we are going to do right now is to make a special array with special start and end tokens to indicate the beginning and end of a name. We are also going to wrap the <span class="blue">list</span>(w)
 
 ```python
 for w in words:
