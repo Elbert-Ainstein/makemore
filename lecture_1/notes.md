@@ -139,3 +139,15 @@ The reason for this to work is that *w* = 'emma', and *w[1:]* = 'mma'. The zip f
 # the 'a' in the w list gets removed
 ```
 
+Just keep in mind that there isn't just **these** consecutive characters in our dataset; There are a lot more. However, just based on this first set of consecutive letters, we can tell that the letter *e* is likely to be the beginning of a name, and the letter *a* is likely to be the end of a name.
+
+What we are going to do right now is to make a special array with special start and end tokens to indicate the beginning and end of a name. We are also going to wrap the <pre><code>*list(w)*</code></pre>
+
+```python
+for w in words:
+
+    characters = ['<S>'] + list(w) + ['<E>']
+
+    for ch1, ch2 in zip(w, w[1:]):
+        print(ch1, ch2)
+```
